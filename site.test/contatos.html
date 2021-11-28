@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="utf-8">
+<title> Style car</title>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="default.png" type="image/x-icon">
+  </head>
+  <body>
+      <header id="header">
+          <a id="logo" href=""> Style car</a>
+          <nav id="nav">
+              <button id="btn-mobile">menu
+                <span id="linhas"></span>
+              </button>
+              <ul id="menu">
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="serviços.html">Serviços</a></li>
+                  <li><a href="contatos.html">contatos</a></li>
+                  <li><a href="quemsomos.html">Quem somos</a></li>
+              </ul>
+          </nav>
+      </header>
+      <fieldset class="Esquerda">
+        <legend> Contato </legend>
+        
+        <!-- Tag Label: Qualquer texto dentro do formulário, é inline-->
+        <label class="alinha"> Nome Completo: </label>
+        
+        <!-- Tag Input serve para desenhar caixas de data, numeros, email, marcar opções, etc -->
+        <!-- Atributo placeholder: Dica de preenchimento para o usuário -->
+        <input type="text" name="nome-do-usuario" autofocus placeholder="Forneça seu nome aqui..." class="maior"> <br>
+        
+        <label class="alinha"> Telefone: </label>
+        <input type="tel" name="txttelefone" id="txttelefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="menor" >
+        <script type="text/javascript">$("#txttelefone").mask("(00) 0000-00009");</script><br>
+        
+        <!-- Atributo type para email, faz uma verificação de padrão de email -->
+        <label class="alinha"> E-mail: </label>
+        <input type="email" name="email" required class="maior"> <br>
+        
+        <label class="alinha"> Assunto: </label>
+            <select name="assunto"  class="menor">
+            <option> ORÇAMENTO </option>				
+            <option> DÚVIDAS </option>				
+            <option> ELOGIOS </option>
+            <option> RECLAMAÇÃO </option>				
+            <option> OUTROS </option>				
+        </select>	<br>
+        
+        <label class="alinha"> Mensagem: </label>
+        <textarea> </textarea> <br><br>
+        
+        
+
+        
+        <!-- opção para o usuário subir arquivos ao servidor -->
+        <!-- Tag hidden não é visivel para o usuário, serve para especificar tamanho aceito de arquivo. Está associado ao servidor -->
+        <!-- Atributo value é o valor total de arquivos e é especificado em bytes -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="20148">
+        
+        <label class="alinha"> Enviar arquivos: </label>
+        <input type="file" name="arquivos" multiple><br><br>
+        
+        <button type="submit" name="enviar-dados"> Enviar </button>
+    </fieldset>
+    
+
+<script src="script.js"></script>
+</body>
+</html>
